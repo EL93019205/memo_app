@@ -1,0 +1,19 @@
+.contents {
+  margin: 0 auto;
+  padding-top: 30px;
+  width: 500px;
+  .form {
+    &__text-field {
+      height: 30px;
+      width: 300px;
+    }
+  }
+  .todos {
+    .todo {
+      font-size: 20px;
+      height: 40px;
+      line-height: 40px;
+      padding: 20px;
+    }
+  }
+}
