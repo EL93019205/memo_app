@@ -1,4 +1,9 @@
 $(function(){
+
+  function buildHTML(todo){
+    var html = $('<li class="todo">').append(todo.content);
+    return html;
+  }
   $('.js-form').on('submit', function(e){
     e.preventDefault();
     var todo = $('.js-form__text-field').val();
@@ -15,7 +20,7 @@ $(function(){
     })
 
     .done(function(data){
-      var html = $('<li class="todo">').append(data.content);
+      var html = buildHTML(data);
       $('.todos').append(html);
       $('.js-form__text-field').val('');
     })
